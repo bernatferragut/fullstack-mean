@@ -10,10 +10,10 @@ mongoose.connect(db, function(err) {
     if(err) {
         console.log('Connection error');
     }
-})
+});
 
 // Getting info through mongoose
-router.get('/articles', function(req, resp) {
+router.get('/articles', function(req, res) {
         console.log('Requesting Artciles...');
         article.find({})
             .exec(function(err, articles){
@@ -21,7 +21,7 @@ router.get('/articles', function(req, resp) {
                     console.log('Error getting the articles');
                 } else {
                     res.json(articles);
-                    console.log(posts);
+                    console.log(articles);
                 }
             });
 }) 
