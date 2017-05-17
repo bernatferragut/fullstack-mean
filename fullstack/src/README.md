@@ -11,6 +11,7 @@ mongodb://<dbuser>:<dbpassword>@ds143151.mlab.com:43151/trumped-db
 
 >{ user: "elbernat", account: "Bernat Ferragut", password: "1lovepyth0n" }
 
+mongodb://elbernat:1L0vepyth0n@ds143151.mlab.com:43151/trumped-db
 
 > MyDB
 ```js
