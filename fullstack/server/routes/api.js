@@ -12,7 +12,7 @@ mongoose.connect(db, function(err) {
     }
 });
 
-// Getting info through mongoose
+// Getting info through mongoose of articles endpoint
 router.get('/articles', function(req, res) {
         console.log('Requesting Artciles...');
         article.find({})

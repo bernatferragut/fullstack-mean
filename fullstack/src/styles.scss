@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800');
+
+// Variables 
+$bg: white;
+$text-color-red: #E52822;
+$text-color-blue: #252F66;
+$accent-color: #E52822;
+
+body {
+    background: $bg;
+    color: $text-color-blue;
+    font-family: 'Raleway';
+}
+
+a {
+    color: $text-color-red;
+}
+
+a:hover {
+    color: $text-color-blue;
+}
+
+.cta-btn , .cta-visited {
+    color: $accent-color;
+    border: 1px solid $text-color-blue;
+    padding: 5px 12px;
+    float: right;
+    border-radius: 5px;
+}
+
+.cta-btn:hover {
+    color: $text-color-blue;
+    border: 1px solid $text-color-red;
+}
+
+
+

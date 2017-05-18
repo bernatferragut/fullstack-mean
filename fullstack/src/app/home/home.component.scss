@@ -1,0 +1,38 @@
+.article-container {
+    border: 1px solid #252F66;
+    background-color: white;
+    padding: 23px;
+    margin-bottom: 30px;
+    height: 100%;
+    position: relative;
+}
+
+.article-title {
+    font-size: 1.4em;
+    display: block;
+}
+
+.article-container p{
+    margin: 20px 0 25px 0;
+}
+
+.articles {
+    margin-bottom: 30px;
+}
+
+.btn2 {
+    float: none;
+    position: absolute;
+    bottom: 10px;
+}
+
+.external svg {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    max-width: none;
+    left: 24px;
+    float: right;
+    bottom: 52px;
+
+}
