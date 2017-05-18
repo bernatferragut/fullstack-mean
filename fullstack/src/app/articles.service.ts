@@ -10,7 +10,12 @@ export class ArticlesService {
   constructor( private http: Http ) { }
 
   getArticles() {
-    return this.http.get('/api/articles')
-      .map( result => this.result = result.json());
+    return this.http.get("/api/articles")
+      .map( res => this.result = res.json());
+  }
+
+    getArticle(id) {
+    return this.http.get("/api/details/" + id)
+      .map( res => this.result = res.json());
   }
 }

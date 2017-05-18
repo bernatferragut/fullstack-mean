@@ -1,10 +1,12 @@
 .article-container {
     border: 1px solid #252F66;
     background-color: white;
-    padding: 23px;
+    padding: 50px;
     margin-bottom: 30px;
+    //width: 300px;
     height: 100%;
     position: relative;
+
 }
 
 .article-title {
@@ -18,12 +20,13 @@
 
 .articles {
     margin-bottom: 30px;
+    //position: absolute;
 }
 
 .btn2 {
     float: none;
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
 }
 
 .external svg {

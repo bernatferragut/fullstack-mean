@@ -8,12 +8,18 @@ import { AppComponent } from './app.component';
 import { ArticlesService } from './articles.service';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
+import { DetailsComponent } from './details/details.component';
+import { LengthPipe } from './length.pipe';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    DetailsComponent,
+    LengthPipe,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,

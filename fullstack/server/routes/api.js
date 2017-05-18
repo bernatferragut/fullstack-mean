@@ -21,7 +21,19 @@ router.get('/articles', function(req, res) {
                     console.log('Error getting the articles');
                 } else {
                     res.json(articles);
-                    console.log(articles);
+                }
+            });
+}) 
+
+// Getting info through mongoose of a single article endpoint
+router.get('/details/:id', function(req, res) {
+        console.log('Requesting Artcile by Id...');
+        article.findById(req.params.id)
+            .exec(function(err, article){
+                if(err){
+                    console.log('Error getting the article by Id');
+                } else {
+                    res.json(article);
                 }
             });
 }) 

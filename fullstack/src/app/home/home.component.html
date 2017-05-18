@@ -1,9 +1,9 @@
 <div class="row">
-  <div class="column small-12 medium-6 large-4 articles" *ngFor="let article of articles">
+  <div class="columns small-12 <medium></medium>-6 large-4 articles" *ngFor="let article of articles">
     <div class="article-container">
       <div class="row">
         <div class="columns small-12 large-10">
-          <a routerLink="/" class="article-title">{{ article.name }}</a>
+          <a routerLink="/details/{{ article._id }}" class="article-title">{{ article.name }}</a>
         </div>
         <div class="columns small-12 large-2 show-for-large">
           <a href="#" target="_blank" class="external">
@@ -16,8 +16,8 @@
           </a>
         </div>
       </div>
-      <p>{{ article.description }}</p>
-      <a routerLink="/" class="cta-btn btn2">More Info</a>
+      <p>{{ article.description | length: 130 }}</p>
+      <a routerLink="/details/{{ article._id }}" class="cta-btn btn2">More Info</a>
     </div>
   </div>
 </div>
