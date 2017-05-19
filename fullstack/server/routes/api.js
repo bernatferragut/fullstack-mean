@@ -41,7 +41,9 @@ router.get('/details/:id', function(req, res) { // EndPoint for this
 // Posting info through mongoose of a single article 
 router.post('/postArticles', function(req, res) { // EndPoint for this
         console.log('Posting an article...');
+
         var newArticle = new article();
+
         newArticle.title = req.body.title;
         newArticle.url = req.body.url;
         newArticle.description = req.body.description;
@@ -55,6 +57,8 @@ router.post('/postArticles', function(req, res) { // EndPoint for this
     });
 
 module.exports = router;
+
+
 
 
 
