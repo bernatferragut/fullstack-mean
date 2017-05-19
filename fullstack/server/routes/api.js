@@ -13,8 +13,8 @@ mongoose.connect(db, function(err) {
 });
 
 // Getting info through mongoose of articles endpoint
-router.get('/articles', function(req, res) {
-        console.log('Requesting Artciles...');
+router.get('/articles', function(req, res) { // EndPoint for this
+        console.log('Requesting Articles...');
         article.find({})
             .exec(function(err, articles){
                 if(err){
@@ -23,10 +23,10 @@ router.get('/articles', function(req, res) {
                     res.json(articles);
                 }
             });
-}) 
+});
 
 // Getting info through mongoose of a single article endpoint
-router.get('/details/:id', function(req, res) {
+router.get('/details/:id', function(req, res) { // EndPoint for this
         console.log('Requesting Artcile by Id...');
         article.findById(req.params.id)
             .exec(function(err, article){
@@ -36,7 +36,23 @@ router.get('/details/:id', function(req, res) {
                     res.json(article);
                 }
             });
-}) 
+});
+
+// Posting info through mongoose of a single article 
+router.post('/postArticles', function(req, res) { // EndPoint for this
+        console.log('Posting an article...');
+        var newArticle = new article();
+        newArticle.title = req.body.title;
+        newArticle.url = req.body.url;
+        newArticle.description = req.body.description;
+        newArticle.save(function(err, addedArticle){
+            if(err){
+                console.log('Could not save Article...');
+            } else {
+                res.json(addedArticle);
+            }
+        });
+    });
 
 module.exports = router;
 

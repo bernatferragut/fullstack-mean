@@ -1,3 +1,31 @@
-<p>
-  article works!
-</p>
+
+<div class="body-blur">
+  <div class="row columns">
+    <h1>Post a Tutorial</h1>
+  </div>
+
+  <form [formGroup]="articleForm" (ngSubmit)="addArticle(articleForm.value)">
+    <div class="row">
+      <div class="columns small-12 medium-6">
+        <label>Title of Tutorial
+          <input type="text" name="title" [formControl]="articleForm.controls['title']">
+        </label>
+        <div class="alert" *ngIf="!articleForm.controls['title'].valid && articleForm.controls['title'].touched">You must specify a title that's at least 15 characters long.</div>
+      </div>
+      <div class="columns small-12 medium-6">
+        <label>URL
+          <input type="text" name="url" [formControl]="articleForm.controls['url']">
+        </label>
+        <div class="alert" *ngIf="!articleForm.controls['url'].valid && articleForm.controls['url'].touched">You must specify a URL.</div>
+      </div>
+    </div>
+      <div class="row columns">
+        <label>Description
+          <textarea name="description" id="description" [formControl]="articleForm.controls['description']"></textarea>
+        </label>
+        <div class="alert" *ngIf="!articleForm.controls['description'].valid && articleForm.controls['description'].touched">You must specify a description that's at least 500 characters long.</div>
+        <input type="submit" class="cta-btn filled" value="Post Article" [disabled]="!articleForm.valid">
+      </div>
+  </form>
+</div>
+

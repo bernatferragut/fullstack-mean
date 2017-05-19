@@ -1,9 +1,12 @@
 export class Article {
     _id: string;
-    name: string;
+    title: string;
     url:  string;
     description: string;
-    liked: number;
+    liked: Number;
 }
+
+
+
 
 
