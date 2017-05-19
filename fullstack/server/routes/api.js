@@ -39,7 +39,7 @@ router.get('/details/:id', function(req, res) { // EndPoint for this
 });
 
 // Posting info through mongoose of a single article 
-router.post('/postArticles', function(req, res) { // EndPoint for this
+router.post('/postArticles', function(req, res) { 
         console.log('Posting an article...');
 
         var newArticle = new article();
