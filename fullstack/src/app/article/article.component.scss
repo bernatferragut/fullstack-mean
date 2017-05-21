@@ -1,0 +1,37 @@
+$bg: white;
+$text-color-red: #E52822;
+$text-color-blue: #252F66;
+$accent-color: #E52822;
+
+label {
+    color: $accent-color;
+    font-size: 1.5em;
+}
+
+input[type="text"], textarea {
+    background: none;
+    border: 1px solid #E52822;
+    padding: 22px 15px;
+    color: #E52822;
+}
+
+textarea {
+    min-height: 70px;
+}
+
+.filled {
+    background-color: white;
+    color: white;
+    float: left;
+    border-radius: 0;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: 'Raleway';
+    font-weight: 700;
+    padding: 12px 22px;
+    margin-top: 40px
+}
+
+.alert {
+    margin: -5px 0 20px 0;
+}

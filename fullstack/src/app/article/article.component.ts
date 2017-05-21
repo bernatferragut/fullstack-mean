@@ -17,9 +17,9 @@ export class ArticleComponent implements OnInit {
   constructor( private _articleService: ArticlesService, fb: FormBuilder, private router: Router) {
 
     this.articleForm = fb.group({
-      'title' : [null, Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(75)])],
+      'title' : [null, Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(200)])],
       'url' : [null, Validators.required],
-      'description' : [null, Validators.compose([Validators.required, Validators.minLength(30), Validators.maxLength(500)])]
+      'description' : [null, Validators.compose([Validators.required, Validators.minLength(30), Validators.maxLength(5000)])]
     });
 
   }
