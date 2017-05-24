@@ -45,4 +45,32 @@ h1 {
     line-height: 1.2em;
 }
 
+.star {
+    color: $accent-color;
+}
+
+#group {
+    cursor: pointer;
+
+}
+
+#group:hover .star{
+    animation: animationStar .5s forwards;
+    -webkit-animation: animationStar .5s forwards;
+}
+
+#group:hover {
+    fill: $text-color-blue;
+}
+
+@keyframes animationStar {
+    0% {
+        fill: $accent-color;
+    }
+
+    100% {
+        fill: $text-color-red;
+    }
+}
+
 
