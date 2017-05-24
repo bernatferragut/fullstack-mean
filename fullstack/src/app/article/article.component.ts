@@ -3,11 +3,14 @@ import { ArticlesService } from './../articles.service';
 import { Article } from '../article';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { routerTransition } from './../animations';
 
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.scss']
+  styleUrls: ['./article.component.scss'],
+  animations: [routerTransition],
+  host: {'[@routerTransition]': ''}
 })
 export class ArticleComponent implements OnInit {
 
