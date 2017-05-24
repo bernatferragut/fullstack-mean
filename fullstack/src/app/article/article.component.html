@@ -12,6 +12,8 @@
         </label>
         <div class="alert" *ngIf="!articleForm.controls['title'].valid && articleForm.controls['title'].touched">You must specify a title that's at least 15 characters long.</div>
       </div>
+      <!--ARTICLE FORM PAGE-->
+      
       <div class="columns small-12 medium-6">
         <label>URL
           <input type="text" name="url" [formControl]="articleForm.controls['url']">
