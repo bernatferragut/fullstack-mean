@@ -2,4 +2,19 @@ p {
     font-size: 1.5em;
 }
 
+.back-btn:hover {
+    cursor: pointer;
+    animation: animationGroup .5s forwards;
+    -webkit-animation: animationGroup .5s forwards;
 
+}
+
+@keyframes animationGroup {
+    0% {
+        fill: #E52822;
+    }
+
+    100% {
+        fill: white;
+    }
+}
