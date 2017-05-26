@@ -82,4 +82,19 @@ h1 {
     }
 }
 
+@media screen and (max-width: 39.9375em) {
+
+    h1 {
+        font-size: 1.6em;
+    }
+}
+
+@media screen and (max-width: 40em) and ( max-width: 63.975em ){
+
+    h1 {
+        font-size: 2.8em;
+        line-height: 1em;
+    }
+}
+
 
